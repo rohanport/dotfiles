@@ -10,6 +10,8 @@ sh -c "$(curl -L https://raw.githubusercontent.com/deluan/zsh-in-docker/master/z
 
 cp ./.p10k.zsh ~/.p10k.zsh
 
-zshrc
+# Ensure new .p10k.zsh config in every terminal
+echo "# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ~/.zshrc
 
 echo "Successfully installed zsh"
