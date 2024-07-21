@@ -21,3 +21,5 @@ zstyle :prompt:pure:prompt:success color '76' # Lime green
 # Load Pure as prompt
 autoload -U promptinit; promptinit
 prompt pure"  >> ~/.zshrc
+
+echo "Successfully installed zsh"
