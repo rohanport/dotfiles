@@ -5,7 +5,7 @@
 ########################################################################################################################
 
 sudo apt-get update && sudo apt-get install -y curl
-sudo sh -c "$(curl -L https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)"
+sudo sh -c "$(curl -L https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)" -t robbyrussell
 
 mkdir -p ~/.zsh
 git clone https://github.com/sindresorhus/pure.git ~/.zsh/pure
