@@ -10,4 +10,6 @@ sh -c "$(curl -L https://raw.githubusercontent.com/deluan/zsh-in-docker/master/z
 git clone https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo "source ~/powerlevel10k/powerlevel10k.zsh-theme" >>! ~/.zshrc
 
+cp ./.p10k.zsh ~/.p10k.zsh
+
 echo "Successfully installed zsh"
