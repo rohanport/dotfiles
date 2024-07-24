@@ -13,7 +13,7 @@ sudo apt-get update && sudo apt-get install -y curl vim
 # Source the entrypoint.sh file if it exists
 sh -c "$(curl -L https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)" -- \
     -a "export TERM=xterm-256color" \
-    -a "[ -d /commandhistory ] && export HISTFILE=/commandhistory/.zsh_history" \
+    -a "[ -d /commandhistory ] && sudo chown -R $(whoami) /commandhistory && export HISTFILE=/commandhistory/.zsh_history" \
     -a "[ -f /entrypoint.sh ] && source /entrypoint.sh"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
