@@ -17,12 +17,13 @@ sh -c "$(curl -L https://raw.githubusercontent.com/deluan/zsh-in-docker/master/z
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-sed -i '1s/^/[[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]] && source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" /' ~/.zshrc
+sed -i '1s/^/\[\[ -r "\${XDG_CACHE_HOME:-\$HOME\/\.cache}\/p10k-instant-prompt-\${(%):-%n}\.zsh" \]\] \&\& source "\${XDG_CACHE_HOME:-\$HOME\/\.cache}\/p10k-instant-prompt-\${(%):-%n}\.zsh"\n\n/' ~/.zshrc
 
 # Copy over p10k config
 cp ./.p10k.zsh ~/.p10k.zsh
 
 # Ensure new .p10k.zsh config in every terminal
-echo "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ~/.zshrc
+echo "
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ~/.zshrc
 
 echo "Successfully installed zsh"
